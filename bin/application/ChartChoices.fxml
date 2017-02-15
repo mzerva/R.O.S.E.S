@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="692.0" prefWidth="637.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chartGUIsManager.ChartChoicesController">
+   <children>
+      <Label layoutX="129.0" layoutY="169.0" text="Create simple new Series:" />
+      <TextField fx:id="seriesNameTextField" layoutX="327.0" layoutY="164.0" prefHeight="25.0" prefWidth="189.0" />
+      <Label layoutX="131.0" layoutY="302.0" text="Use this column as xAxis:" />
+      <ChoiceBox layoutX="327.0" layoutY="297.0" prefHeight="25.0" prefWidth="189.0" fx:id="xColumnsChoiceBox" />
+      <Label layoutX="131.0" layoutY="348.0" text="Use this column as yAxis:" />
+      <ChoiceBox fx:id="yColumnsChoiceBox" layoutX="327.0" layoutY="343.0" prefHeight="25.0" prefWidth="189.0" />
+      <Button fx:id="addSeriesButton" layoutX="192.0" layoutY="388.0" mnemonicParsing="false" onAction="#addSeries" text="Add Series" />
+      <Label layoutX="20.0" layoutY="438.0" text="You selected this/these serie(s):" />
+      <ListView fx:id="selectedSeriesListView" layoutX="20.0" layoutY="468.0" prefHeight="155.0" prefWidth="466.0" />
+      <Button fx:id="deleteSeriesButton" layoutX="516.0" layoutY="533.0" mnemonicParsing="false" onAction="#deleteSeries" text="Delete Series" />
+      <Button fx:id="createScatterPlotButton" layoutX="244.0" layoutY="649.0" mnemonicParsing="false" onAction="#createScatter" text="Create ScatterChart" />
+      <ChoiceBox fx:id="projectChoiceBox" layoutX="265.0" layoutY="52.0" prefHeight="25.0" prefWidth="250.0" />
+      <ChoiceBox fx:id="tableChoiceBox" layoutX="265.0" layoutY="90.0" prefHeight="25.0" prefWidth="250.0" />
+      <Label layoutX="21.0" layoutY="21.0" text="1) Give your Chart a Name:" />
+      <Label layoutX="21.0" layoutY="57.0" text="2) Choose a Project:" />
+      <Label layoutX="21.0" layoutY="95.0" text="3) Choose a Table:" />
+      <TextField fx:id="nameTextField" layoutX="265.0" layoutY="16.0" prefHeight="25.0" prefWidth="250.0" />
+      <Label layoutX="190.0" layoutY="199.0" text="or">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="129.0" layoutY="228.0" text="Create Series from column:" />
+      <ChoiceBox fx:id="seriesColumnChoiceBox" layoutX="326.0" layoutY="223.0" prefHeight="25.0" prefWidth="189.0" />
+      <Button fx:id="createBarChartButton" layoutX="20.0" layoutY="649.0" mnemonicParsing="false" onAction="#createBarChart" text="Create BarChart" />
+      <Button fx:id="createLineChartButton" layoutX="494.0" layoutY="649.0" mnemonicParsing="false" onAction="#createLineChart" text="Create LineChart" />
+      <Label layoutX="20.0" layoutY="131.0" text="4) Create series :" />
+      <Label layoutX="21.0" layoutY="393.0" text="5) Add your series :" />
+   </children>
+</AnchorPane>

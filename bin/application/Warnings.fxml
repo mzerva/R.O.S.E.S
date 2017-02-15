@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="195.0" prefWidth="456.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="warningGUIsManager.WarningsController">
+   <children>
+      <Label fx:id="sqlExLabel" layoutX="29.0" layoutY="51.0" textAlignment="CENTER" />
+      <Button fx:id="okButton" layoutX="29.0" layoutY="127.0" mnemonicParsing="false" onAction="#okPressed" text="OK" />
+   </children>
+</AnchorPane>

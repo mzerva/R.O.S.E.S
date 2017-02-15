@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="282.0" prefWidth="570.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewGUIsManager.ViewController">
+   <children>
+      <TextArea fx:id="viewTextArea" layoutX="33.0" layoutY="30.0" prefHeight="220.0" prefWidth="303.0" />
+      <Button fx:id="applyButton" layoutX="359.0" layoutY="75.0" mnemonicParsing="false" onAction="#applyView" text="Apply Only in This Project" />
+      <Button fx:id="applyMultipleButton" layoutX="360.0" layoutY="177.0" mnemonicParsing="false" onAction="#chooseProjects" text="Apply in Multiple Projects" />
+   </children>
+</AnchorPane>

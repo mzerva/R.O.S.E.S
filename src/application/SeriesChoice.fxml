@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="192.0" prefWidth="470.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chartGUIsManager.SeriesChoiceController">
+   <children>
+      <Label layoutX="32.0" layoutY="39.0" text="Do you want to use default format of series or set it yourself?" />
+      <Button fx:id="defaultButton" layoutX="64.0" layoutY="108.0" mnemonicParsing="false" onAction="#useDefault" text="Use Default" />
+      <Button fx:id="seriesOptionsButton" layoutX="303.0" layoutY="108.0" mnemonicParsing="false" onAction="#seriesOptions" text="Series Options" />
+   </children>
+</AnchorPane>

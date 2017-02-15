@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="677.0" prefWidth="1085.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dataGUIManager.TableController">
+   <children>
+      <TableView fx:id="dataTable" layoutX="23.0" layoutY="296.0" prefHeight="360.0" prefWidth="1041.0" />
+      <Label layoutX="23.0" layoutY="73.0" text="Use this column as :" />
+      <CheckBox layoutX="176.0" layoutY="72.0" mnemonicParsing="false" text="xAxis" fx:id="xAxisCheckBox" />
+      <CheckBox fx:id="yAxisCheckBox" layoutX="263.0" layoutY="72.0" mnemonicParsing="false" text="yAxis" />
+      <CheckBox fx:id="seriesCheckBox" layoutX="341.0" layoutY="72.0" mnemonicParsing="false" text="series" />
+      <Label fx:id="chartLabel" layoutX="23.0" layoutY="104.0" textAlignment="CENTER" textFill="#4c53e1" />
+      <Button fx:id="makeScatterButton" layoutX="328.0" layoutY="178.0" mnemonicParsing="false" onAction="#makeScatter" text="Show ScatterChart" />
+      <Button fx:id="isolateButton" layoutX="558.0" layoutY="251.0" mnemonicParsing="false" onAction="#isolateData" text="Isolate" />
+      <Button fx:id="makeBarChartButton" layoutX="176.0" layoutY="178.0" mnemonicParsing="false" onAction="#makeBarChart" text="Show BarChart" />
+      <Button fx:id="createLineChartButton" layoutX="497.0" layoutY="178.0" mnemonicParsing="false" onAction="#makeLineChart" text="Show LineChart" />
+      <Label layoutX="23.0" layoutY="135.0" text="2) Give your Chart a Title:" />
+      <TextField fx:id="chartTitleTextField" layoutX="205.0" layoutY="130.0" prefHeight="25.0" prefWidth="301.0" />
+      <Label layoutX="23.0" layoutY="43.0" text="1) First, choose your xAxis, yAxis and series :" />
+      <Label layoutX="23.0" layoutY="183.0" text="3) Choose Chart :" />
+      <Label layoutX="25.0" layoutY="14.0" text="CREATE A CHART :">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="227.0" text="ISOLATE DATA :">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="256.0" text="Click on the columns you want to isolate and then press the &quot;Isolate&quot; button." />
+   </children>
+</AnchorPane>

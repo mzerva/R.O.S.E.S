@@ -1,0 +1,1 @@
+load data local infile into table TransitionEvents fields terminated by ";" lines terminated by "\n" ignore 1 lines (tTrId, @dummy, @dummy, tableName, eventType, attrName, attrType, isKey, pKey, fKey) ;
