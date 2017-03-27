@@ -1,4 +1,4 @@
-package controller;
+package databaseManager;
 
 import java.io.BufferedReader;
 
