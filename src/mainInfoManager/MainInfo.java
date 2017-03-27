@@ -1,11 +1,11 @@
-package controller;
+package mainInfoManager;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.HashMap;
 
-public class StaticStuff {
+public class MainInfo {
 	public static HashMap<String,String> files = new HashMap<String,String>();
 	/*Path gia to arxeio .sql dhmiourgias ths vashs*/
 	public static String filePath="db_config/DBEvolution.sql";
