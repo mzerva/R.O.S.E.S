@@ -1,4 +1,2 @@
 -R.O.S.E.S. is a DBMS, so in order to run R.O.S.E.S. you need to have mysql installed to your system.
--You should create a mysql user with the following properties: username: EvolutionUser & password: Evolution if you want to make no changes.
--If you already have a user and you want to use it, just change the "url" String in MainInfo class of the mainInfoManager package with your username and password.
--This version of R.O.S.E.S. is suitable for Windows, if you want to use it in Unix-based systems you should replace "\" with "/" in Database class of databaseManager package.
+-R.O.S.E.S. is made with JavaFx, so you need to have JavaFx installed to your system.
