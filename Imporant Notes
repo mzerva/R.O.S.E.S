@@ -1,2 +1,4 @@
 -R.O.S.E.S. is a DBMS, so in order to run R.O.S.E.S. you need to have mysql installed to your system.
 -R.O.S.E.S. is made with JavaFx, so you need to have JavaFx installed to your system.
+-Java 1.8 or higher is required
+-In case that the mysql jar isn't detected automatically, you can manually put it in you build path. The mysql jar is found in the lib folder.
