@@ -153,10 +153,13 @@ public class MainGUIController implements Initializable {
 			 inputReader = new Scanner(new FileInputStream(file)); 
 			 boolean flag=false;
 			 while(inputReader.hasNextLine()){
-				    flag=true;
-				    String[] dbCodes=inputReader.nextLine().split(";");
-				    user=dbCodes[0];
-				    password=dbCodes[1];    
+				    String line=inputReader.nextLine();
+				    if(!line.equals("")){
+				    	flag=true;
+					    String[] dbCodes=line.split(";");
+					    user=dbCodes[0];
+					    password=dbCodes[1];    
+				    }
 			 }
 			 inputReader.close();
 			 if(flag==false){
