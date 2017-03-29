@@ -157,8 +157,18 @@ public class MainGUIController implements Initializable {
 				    if(!line.equals("")){
 				    	flag=true;
 					    String[] dbCodes=line.split(";");
-					    user=dbCodes[0];
-					    password=dbCodes[1];    
+					    if(dbCodes[0].equals(" ")){
+					    	user="";
+					    }
+					    else{
+					    	user=dbCodes[0];
+					    }
+					    if(dbCodes[1].equals(" ")){
+					    	password="";
+					    }
+					    else{
+						    password=dbCodes[1];    
+					    }
 				    }
 			 }
 			 inputReader.close();
