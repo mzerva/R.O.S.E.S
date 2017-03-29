@@ -119,13 +119,19 @@ public class MainGUIController implements Initializable {
 		        Scene scene = new Scene(page);
 		        dialogStage.setScene(scene);
 		        dialogStage.setTitle("Database Passwords");
-		        dialogStage.showAndWait();	   
-		        checkForDBPasswords();
-		        ini();
+		        dialogStage.showAndWait();	 
+		        if(checkForDBPasswords()){
+		        	ini();
+		        }
+		        else{
+		        	DatabaseUserGuiController dbC = loader.getController();
+			        user=dbC.getUsername();
+			        password=dbC.getPassword();
+			        ini();
+		        }
 		    } catch (IOException e) {
 		        e.printStackTrace();
 		    }
-			
 		}
 		else{
 			ini();
