@@ -16,6 +16,7 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -27,7 +28,7 @@ public class DatabaseUserGuiController implements Initializable {
 	@FXML
 	private TextField usernameTextfield;
 	@FXML
-	private TextField passwordTextfield;
+	private PasswordField passwordTextfield;
 	@FXML
 	private CheckBox saveOptionsCheckbox;
 	private String username=new String();
@@ -38,11 +39,6 @@ public class DatabaseUserGuiController implements Initializable {
 	public void initialize(URL location, ResourceBundle resources) {}
 	
 	public void submitPressed(ActionEvent event) throws IOException{
-		/*if(usernameTextfield.getText().equals("") || passwordTextfield.getText().equals("")){
-			String warning="No name for project!";
-			showWarning(warning);
-		}*/
-		//System.out.println("Pressed");
 		username=usernameTextfield.getText();
 		password=passwordTextfield.getText();
 		if(saveOptionsCheckbox.isSelected()){
@@ -78,20 +74,4 @@ public class DatabaseUserGuiController implements Initializable {
 			 System.out.printf("Error opening the file %s.txt.\n",output);
 		 }
 	}
-	/*public void showWarning(String warning){
-    	try{
-			FXMLLoader loader = new FXMLLoader();
-	        loader.setLocation((getClass().getResource("/application/Warnings.fxml")));
-	        AnchorPane page = (AnchorPane) loader.load();
-	        Stage dialogStage = new Stage();
-	        Scene scene = new Scene(page);
-	        dialogStage.setScene(scene);
-	        dialogStage.setTitle("Warning");
-	        WarningsController wC = loader.getController();
-	        wC.setWarning(warning);
-	        dialogStage.showAndWait();	   
-	    } catch (IOException e) {
-	        e.printStackTrace();
-	    }
-    }*/
 }
