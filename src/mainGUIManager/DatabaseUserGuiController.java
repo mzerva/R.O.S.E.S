@@ -64,6 +64,12 @@ public class DatabaseUserGuiController implements Initializable {
 		try 
 		 { 
 			outputWriter = new PrintWriter(new FileWriter(file, true));
+			if(username.equals("")){
+				username=" ";
+			}
+			if(password.equals("")){
+				password=" ";
+			}
 			outputWriter.append(username+";"+password+"\n");
 			outputWriter.close();
 		 } 
