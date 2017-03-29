@@ -9,7 +9,9 @@ public class MainInfo {
 	public static HashMap<String,String> files = new HashMap<String,String>();
 	/*Path gia to arxeio .sql dhmiourgias ths vashs*/
 	public static String filePath="db_config/DBEvolution.sql";
-	private static String url = "jdbc:mysql://localhost:3306/?user=EvolutionUser&password=Evolution";
+	//private static String url = "jdbc:mysql://localhost:3306/?user=EvolutionUser&password=Evolution";
+	//private static String url = "jdbc:mysql://localhost:3306/?user=root&password=root";
+	private static String url = new String();
 	/*user k password ths vashs sthn opoia theloume na sundethoume */
     public static Connection con;
     public static String warning = new String();
@@ -30,8 +32,10 @@ public class MainInfo {
 		files.put("metrics.csv", CurrentCmdFolder+"loadMetrics.sql");
 		files.put("transitions.csv", CurrentCmdFolder+"loadTransitionEvents.sql");
 		files.put("all.csv", CurrentCmdFolder+"loadAll.sql");
+		files.put("fk_transitions.csv", CurrentCmdFolder+"loadFK.sql");
 	}
-	public static void init(){
+	public static void init(String user, String password){
+		url= "jdbc:mysql://localhost:3306/?user="+user+"&password="+password;
 		try {
 		    Class.forName("com.mysql.jdbc.Driver");
 		} catch (ClassNotFoundException e) {
