@@ -105,13 +105,66 @@ public class MainGUIController implements Initializable {
 	private ArrayList<String> existingProjects = new ArrayList<String>();
 	private guiRequestManager.UpdateManager updater;
 	private guiRequestManager.DataProvider provider;
+	private String user=new String();
+	private String password=new String();
 		
 	@Override
 	public void initialize(URL location, ResourceBundle resources){
-		MainInfo.init();
+		if(!checkForDBPasswords()){
+			try{
+				FXMLLoader loader = new FXMLLoader();
+		        loader.setLocation((getClass().getResource("/application/DatabaseUser.fxml")));
+		        AnchorPane page = (AnchorPane) loader.load();
+		        Stage dialogStage = new Stage();
+		        Scene scene = new Scene(page);
+		        dialogStage.setScene(scene);
+		        dialogStage.setTitle("Database Passwords");
+		        dialogStage.showAndWait();	   
+		        checkForDBPasswords();
+		        ini();
+		    } catch (IOException e) {
+		        e.printStackTrace();
+		    }
+			
+		}
+		else{
+			ini();
+		}
+		
+	}
+	public void ini(){
+		MainInfo.init(user,password);
 		model=projectChoiceBox.getSelectionModel();	
 		modelData=dataChoiceBox.getSelectionModel();
 		refresh();
+	}
+	public boolean checkForDBPasswords(){
+		Scanner inputReader;
+		String path="existingProjects/DBPassword.txt";
+		File file = new File(path);
+		try 
+		 { 
+			 inputReader = new Scanner(new FileInputStream(file)); 
+			 boolean flag=false;
+			 while(inputReader.hasNextLine()){
+				    flag=true;
+				    String[] dbCodes=inputReader.nextLine().split(";");
+				    user=dbCodes[0];
+				    password=dbCodes[1];    
+			 }
+			 inputReader.close();
+			 if(flag==false){
+				 return false;
+			 }
+			 else{
+				 return true;
+			 }
+		 } 
+		 catch(FileNotFoundException e) 
+		 { 
+			 System.out.printf("File %s was not found or could not be opened.\n",path); 
+			 return false;
+		 }
 	}
 	public void dataViewer(){
 		dataItems = FXCollections.observableArrayList();
