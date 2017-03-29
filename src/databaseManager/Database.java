@@ -17,9 +17,11 @@ public class Database  {
 	private static boolean files2=false;
 	private static String file1=new String();
 	private static String file2=new String();
+	private static String os= new String();
     public Database(Connection con, String filePath){
     	this.con=con;
     	this.filePath=filePath;
+    	os=System.getProperty("os.name").toLowerCase();
     }
     public Database(Connection con, String filePath, String inputFile){
     	this.con=con;
@@ -34,6 +36,7 @@ public class Database  {
     	else{
     		files2=false;
     	}
+    	os=System.getProperty("os.name").toLowerCase();
     }
     public void execute() throws SQLException{
         String s= new String();
@@ -46,7 +49,12 @@ public class Database  {
             	if(s.contains("infile")){
             		String[] tokens=s.split("infile");
             		if(files2==false){
-            			s=tokens[0]+" infile '"+inputFile.replace("\\","\\\\")+"' "+tokens[1];
+            			if(os.indexOf("win")>-1){
+            				s=tokens[0]+" infile '"+inputFile.replace("\\","\\\\")+"' "+tokens[1];
+            			}
+            			else{
+            				s=tokens[0]+" infile '"+inputFile+"' "+tokens[1];            			
+            			}
             		}
             		else{
             			if(count==0){
