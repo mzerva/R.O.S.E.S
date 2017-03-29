@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="214.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainGUIManager.DatabaseUserGuiController">
+   <children>
+      <Label layoutX="18.0" layoutY="33.0" prefHeight="17.0" prefWidth="277.0" text="Please enter your Mysql username and password:" />
+      <Label layoutX="18.0" layoutY="70.0" text="Username:" />
+      <Label layoutX="18.0" layoutY="103.0" text="Password:" />
+      <TextField fx:id="usernameTextfield" layoutX="92.0" layoutY="66.0" prefHeight="25.0" prefWidth="185.0" />
+      <TextField fx:id="passwordTextfield" layoutX="92.0" layoutY="99.0" prefHeight="25.0" prefWidth="185.0" />
+      <Button fx:id="submitButton" layoutX="219.0" layoutY="166.0" mnemonicParsing="false" onAction="#submitPressed" text="Submit" />
+      <CheckBox fx:id="saveOptionsCheckbox" layoutX="18.0" layoutY="149.0" mnemonicParsing="false" text="Save my options" />
+   </children>
+</AnchorPane>
