@@ -3,3 +3,5 @@
 -Java 1.8 or higher is required
 -In case that the mysql jar isn't detected automatically, you can manually put it in you build path. The mysql jar is found in the lib folder.
 -If you want to change the mysql username and password that you have saved, you can find it in existingProjects\DBPassword.txt, delete it and then re-run R.O.S.E.S.
+-R.O.S.E.S. takes as input Hecate's output csv files.
+-To load Hecate's files choose all csv files except from all.csv.
