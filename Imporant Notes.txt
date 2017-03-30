@@ -1,6 +1,8 @@
 -R.O.S.E.S. is a DBMS, so in order to run R.O.S.E.S. you need to have mysql installed to your system.
 -R.O.S.E.S. is made with JavaFx, so you need to have JavaFx installed to your system.
--Java 1.8 or higher is required
+-Java 1.8 or higher is required.
+-Mysql should be running in order to run R.O.S.E.S.
+-The mysql user you choose, should have permission to create and drop tables.
 -If you want to change the mysql username and password that you have saved, you can find it in existingProjects\DBPassword.txt, delete it and then re-run R.O.S.E.S.
 -R.O.S.E.S. takes as input Hecate's output csv files.
 -To load Hecate's files in a project, choose all csv files except from all.csv.
